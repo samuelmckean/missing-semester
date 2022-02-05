@@ -15,15 +15,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-
-on:
-  push:
-    branches:
-      - main 
-
-name: 'Trigger: Push action'
-
-jobs:
   shellcheck:
     name: Shellcheck
     runs-on: ubuntu-latest

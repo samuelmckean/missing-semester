@@ -25,4 +25,6 @@ jobs:
   write-good:
     runs-on: ubuntu-latest
     steps:
-      - run: write-good *.md
+      - uses: actions/checkout@v2
+      - uses: tomwhross/write-good-action@v1.5
+      - run: echo | write-good *.md
